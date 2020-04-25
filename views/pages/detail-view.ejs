@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main page</title>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li><a href="/">My Todo List</a></li>
+            <li><a href="/add"> add Task</a></li>
+        </ul>
+    </header>
+
+  
+        <section>
+            <article>
+                <h4>Task: <%=task.title%></h4>
+                <p>description : <%=task.description%></p>
+                <p>Contant : <%=task.contact%></p>
+                <p>Status :<%=task.status%></p>
+                <p>Category : <%=task.category%></p>
+                <p>Complete by <%=task.due%></p>
+
+            </article>
+        </section>
+
+        
+        <form action="/delete/<%=task.id%>?_method=delete" method="post">
+        <button type="submit">Delete</button>
+        </form>
+
+        <button id='update_btn'>Update</button>
+        <section id='update_form'>
+            <form action="/update/<%=task.id%>?_method=put" method="post">
+               <input type="text" name="title" value="<%=task.title%>">
+               <input type="text" name="status" value="<%=task.status%>">
+               <input type="text" name="category" value="<%=task.category%>">
+               <input type="text" name="contact" value="<%=task.contact%>">
+               <textarea name="description" cols="30" rows="10"><%=task.description%></textarea>
+                <button>update task</button>
+            </form>
+        </section>
+        
+    
+
+        <script src="./public/app.js"></script>
+
+    
+</body>
+</html>

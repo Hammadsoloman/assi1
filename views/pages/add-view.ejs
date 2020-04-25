@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main page</title>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li><a href="/">My Todo List</a></li>
+            <li><a href="/add"> add Task</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <h2 class="view-title">ADD TASK</h2>
+
+        <form action="/add" method="POST">
+            <fieldset>
+                <legend>ADd the task</legend>
+                <input type="text" name="title" placeholder="Task" />
+                <textarea name="description" cols="30" rows="10" placeholder="write here"></textarea>
+                <input type="text" name="category" placeholder="Category" />
+                <input type="text" name="contact" placeholder="Contact" />
+                <input type="hidden" name="status" value="not done" placeholder="status" />
+                <button>Submit</button>
+            </fieldset>
+        </form>
+    </main>
+
+     
+</body>
+</html>

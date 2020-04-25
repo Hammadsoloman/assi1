@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main page</title>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li><a href="/">My Todo List</a></li>
+            <li><a href="/add"> add Task</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section>
+            <%tasks.forEach(task=>{%>
+            <article>
+                <h4>Task name : <span><%=task.title%></span></h4>
+                <p>Completition : <%=task.status%></p>
+                <a class="taskBtn" href="/tasks/<%=task.id%>">View Details</a>
+            </article>
+            <%})%>
+        </section>
+    </main>
+
+ 
+
+
+</body>
+
+</html>
